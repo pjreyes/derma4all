@@ -12,4 +12,4 @@ def home():
 def cart():
     return render_template('cart.html')
 if __name__ == '__main__':
-    app.run(host="192.168.1.104",debug=True)
+    app.run(debug=True)
