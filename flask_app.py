@@ -5,7 +5,13 @@ app = Flask(__name__)
 @app.route('/')
 
 def home():
-    return render_template('index.html')
+    productos = [
+        {'brand': 'Klapp', 'text': 'Cremas para distintos tipos de uso, siempre pensando en tu cuidado y belleza','name':'klap_products'},
+        {'brand': 'DermaPen', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel metus nec mi ornare posuere.','name':'needles_dermapen'},
+        {'brand': 'PlasmaPen', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel metus nec mi ornare posuere.','name':'needles_plasmapen'}
+    ] # este array debe ser un servicio con BD
+
+    return render_template('index.html', productos=productos)
 
 @app.route('/cart')
 

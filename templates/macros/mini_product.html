@@ -1,0 +1,15 @@
+{% macro mostrar_producto(producto) %}
+<div class="swiper-slide">
+    <div class="card">
+        <p class="testimonial-author">{{producto['brand']}}</p>
+        <img class="card-image" src="static/images/{{producto['name']}}.jpg" alt="alternative">
+        <div class="card-body">
+            <p class="testimonial-text">{{producto['text']}}</p>
+            
+        </div>
+    </div>
+</div> 
+{% endmacro %}
+
+
+<!-- end of swiper-slide -->
